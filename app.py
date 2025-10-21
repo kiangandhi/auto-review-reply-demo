@@ -20,7 +20,7 @@ st.markdown("<p style='text-align:center; color:grey;'>Write natural, human repl
 st.divider()
 
 # ---------- INPUTS ----------
-st.subheader("📝 Review Input")
+st.subheader("📝 Review")
 review = st.text_area(
     "Paste a Google review",
     height=130,
