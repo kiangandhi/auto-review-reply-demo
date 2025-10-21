@@ -109,12 +109,19 @@ if st.session_state["reply"]:
     with colC:
         if st.button("🔁 Regenerate"):
             tone = st.session_state.get("tone_choice")
-            if not tone:
+            if not st.session_state.get("reply"):
                 st.warning("Please generate a reply first.")
+            elif not tone:
+                st.warning("Please generate a reply first to set the tone.")
             else:
                 with st.spinner("Regenerating reply..."):
-                    new_reply = generate_reply(review, rating, tone_choice=tone)
+                    new_reply = generate_reply(
+                        review, 
+                        rating, 
+                        tone_choice=tone
+                    )
                     st.session_state["reply"] = new_reply
-                    st.session_state["edited_reply"] = new_reply  # keep synced
+                    st.session_state["edited_reply"] = new_reply
                     st.session_state["edit_mode"] = False
-                st.success("Reply regenerated successfully.")
+                st.success("✅ Reply regenerated successfully.")
+                st.experimental_rerun()
