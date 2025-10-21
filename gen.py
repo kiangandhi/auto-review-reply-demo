@@ -9,7 +9,7 @@ def generate_reply(
     review_text,
     rating,
     tone_choice="Both",
-    business_name="Pump Gym Cambridge",
+    business_name="Pump Gym Watford",
     business_type="24-hour fitness club",
     location="Watford, UK"
 ):
