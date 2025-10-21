@@ -27,7 +27,7 @@ review = st.text_area(
     placeholder="E.g. Amazing gym. Great parking. Everything you need in a gym. Plus it has a sauna."
 )
 rating = st.slider("⭐ Star rating", 1, 5, 4, help="Select the star rating from the review.")
-
+st.caption("This demo uses manual input. The full version will pull reviews and ratings directly from Google")
 st.divider()
 st.subheader("🎙️ Choose Tone")
 
@@ -96,7 +96,7 @@ if st.session_state["reply"]:
                 pyperclip.copy(text_to_copy)
                 st.success("Approved and copied to clipboard!")
             except Exception:
-                st.warning("Clipboard copy not supported — please copy manually.")
+                st.warning("Copy unavailable in this demo. In the full version, replies will post directly to Google.")
             st.session_state["edit_mode"] = False
 
     # ✏️ Edit
