@@ -124,4 +124,4 @@ if st.session_state["reply"]:
                     st.session_state["edited_reply"] = new_reply
                     st.session_state["edit_mode"] = False
                 st.success("✅ Reply regenerated successfully.")
-                st.experimental_rerun()
+                st.rerun()
