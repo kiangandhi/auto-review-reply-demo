@@ -24,7 +24,7 @@ st.markdown("### Business Details")
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    business_name = st.text_input("Business Name", value="Pump Gym")
+    business_name = st.text_input("Business Name", placeholder="Pump Gym")
 with col2:
     industry = st.text_input("Industry", value="Fitness")
 with col3:
