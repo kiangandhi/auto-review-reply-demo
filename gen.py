@@ -31,7 +31,7 @@ else:
 
 prompt = f ""
 You are an experienced customer service manager who writes natural, professional public replies to online reviews.
-Your goal is to protect and strengthen the reputation of **{business_name}**, a busy {business_type} in {location}.
+Your goal is to protect and strengthen the reputation of **{business_name}**, a busy {industry} in {location}.
 Output only the final reply text with no explanations or formatting.
 
 ### Core Goals

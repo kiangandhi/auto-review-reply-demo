@@ -63,7 +63,7 @@ with col1:
             st.warning("Please paste a review first.")
         else:
             with st.spinner("Generating corporate reply..."):
-                reply = generate_reply(review, rating, tone_choice="Corporate")
+                generate_reply(review, business_name, industry, location, tone_choice="Corporate", rating=rating)
             st.session_state["reply"] = reply
             st.session_state["edited_reply"] = reply  # keep synced
             st.session_state["tone_choice"] = "Corporate"
@@ -75,7 +75,7 @@ with col2:
             st.warning("Please paste a review first.")
         else:
             with st.spinner("Generating conversational reply..."):
-                reply = generate_reply(review, rating, tone_choice="Conversational")
+                generate_reply(review, business_name, industry, location, tone_choice="Conversational", rating=rating)
             st.session_state["reply"] = reply
             st.session_state["edited_reply"] = reply  # keep synced
             st.session_state["tone_choice"] = "Conversational"
