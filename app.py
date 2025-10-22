@@ -19,12 +19,25 @@ st.markdown("<h1 style='text-align:center;'>AI Review Reply Generator</h1>", uns
 st.markdown("<p style='text-align:center; color:grey;'>Write natural, human replies to Google reviews instantly.</p>", unsafe_allow_html=True)
 st.divider()
 
+# ---------- BUSINESS INFO INPUT ----------
+st.markdown("### Business Details")
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    business_name = st.text_input("Business Name", value="Pump Gym")
+with col2:
+    industry = st.text_input("Industry", value="Fitness")
+with col3:
+    location = st.text_input("Location", value="Cambridge")
+
+# You can then pass these to your generate_reply() function if needed:
+# e.g. response = generate_reply(review, business_name, industry, location)
 # ---------- INPUTS ----------
 st.subheader("📝 Review")
 review = st.text_area(
     "Paste a Google review",
     height=130,
-    placeholder="E.g. Amazing gym. Great parking. Everything you need in a gym. Plus it has a sauna."
+    placeholder="E.g. Amazing ... Great parking. Everything you need in a ... Plus it has a ...."
 )
 rating = st.slider("⭐ Star rating", 1, 5, 4, help="Select the star rating from the review.")
 st.caption("This demo uses manual input. The full version will pull reviews and ratings directly from Google")
