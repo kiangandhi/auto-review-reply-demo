@@ -28,7 +28,7 @@ with col1:
 with col2:
     industry = st.text_input("Industry", placeholder="Fitness")
 with col3:
-    location = st.text_input("Location", placeholder="Cambridge")
+    location = st.text_input("Location", placeholder="Lomndon, UK")
 
 # You can then pass these to your generate_reply() function if needed:
 # e.g. response = generate_reply(review, business_name, industry, location)
