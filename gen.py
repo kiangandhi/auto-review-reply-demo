@@ -5,14 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def generate_reply(
-    review_text,
-    rating,
-    tone_choice="Both",
-    business_name="Pump Gym Watford",
-    business_type="24-hour fitness club",
-    location="Watford, UK"
-):
+def generate_reply(review, business_name=None, industry=None, location=None, tone_choice=None, rating=None):
 
     # --- Tone selector wrapper ---
     if tone_choice == "Corporate":
