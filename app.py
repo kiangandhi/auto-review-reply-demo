@@ -40,7 +40,7 @@ review = st.text_area(
     placeholder="E.g. Amazing ... Great parking. Everything you need in a ... Plus it has a ...."
 )
 rating = st.slider("⭐ Star rating", 1, 5, 4, help="Select the star rating from the review.")
-st.caption("This demo uses manual input. The full version will pull reviews and ratings directly from Google")
+st.caption(" Demo: Replies are generated instantly. The full version will auto-fetch reviews from Google.")
 st.divider()
 st.subheader("🎙️ Choose Tone")
 
